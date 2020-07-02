@@ -1,0 +1,7 @@
+{
+  "name": "igtiProject",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

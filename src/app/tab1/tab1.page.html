@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card class="welcome-card">
+    <ion-img src="/assets/shapes.svg"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>Bem Vindo</ion-card-subtitle>
+      <ion-card-title>App Disciplina AFM </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>O objetivo dessa disciplina é apresentar e discutir as tecnologias Mobile disponíveis hoje no mercado. Durante os próximos capítulos vamos aprofundar principalmente nas tecnologias híbridas como IONIC e React Native</p>
+    </ion-card-content>
+  </ion-card>
+  <br /><br />
+  <!-- Preste atenção nessa parte do código onde fazer um ngFor para percorrer nossa lista  -->
+  <!-- E preencher os dados dentro do nosso card através do data binding  -->
+  <ion-card *ngFor='let user of users' (click)="seleciona(user)"  class="welcome-card">
+    <ion-img src="{{ user.img_url }}"></ion-img>
+    <ion-card-header>
+      <ion-card-title>{{ user.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Celular: {{ user.phone }} </p>
+      <p>Email: {{ user.email }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

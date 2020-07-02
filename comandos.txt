@@ -1,0 +1,7 @@
+ng build --prod 
+
+npx cap add android
+
+npx cap copy android Ou Ios
+
+npx cap open android
